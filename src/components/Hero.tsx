@@ -58,9 +58,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white mb-8 drop-shadow-2xl max-w-3xl"
+            className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-primary mb-8 max-w-3xl"
+            style={{ 
+              textShadow: "7px 7px 0 #FFFFFF, -7px -7px 0 #FFFFFF, 7px -7px 0 #FFFFFF, -7px 7px 0 #FFFFFF"
+            }}
           >
-            <span className="bg-primary px-4 py-1 rounded-sm decoration-clone">"Azt kérte, tegyek úgy, mintha aludnék"</span>
+            "Azt kérte, tegyek úgy, mintha aludnék"
           </motion.h1>
 
           <motion.p
