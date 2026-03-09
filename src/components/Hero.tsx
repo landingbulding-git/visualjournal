@@ -59,9 +59,6 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
             className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-primary mb-8 max-w-3xl"
-            style={{ 
-              textShadow: "7px 7px 0 #FFFFFF, -7px -7px 0 #FFFFFF, 7px -7px 0 #FFFFFF, -7px 7px 0 #FFFFFF"
-            }}
           >
             "Azt kérte, tegyek úgy, mintha aludnék"
           </motion.h1>
