@@ -60,7 +60,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.4 }}
             className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-primary mb-8 max-w-3xl"
             style={{ 
-              textShadow: "7px 7px 0 #FFFFFF, -7px -7px 0 #FFFFFF, 7px -7px 0 #FFFFFF, -7px 7px 0 #FFFFFF"
+              textShadow: "2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, 3px 3px 6px rgba(0,0,0,0.3)"
             }}
           >
             "Azt kérte, tegyek úgy, mintha aludnék"
