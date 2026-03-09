@@ -19,27 +19,23 @@ export default function Hero() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden flex items-center justify-center bg-zinc-950">
       {/* Background/Central Image Container */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-70 pointer-events-none">
+      <div className="absolute bottom-0 left-0 right-0 z-0 flex items-end justify-center pointer-events-none">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex}
             src={IMAGES[currentIndex]}
             alt="Hero character illustration"
-            className="w-full h-full object-cover md:object-contain max-w-6xl"
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
+            className="w-full object-contain max-h-[80vh] md:max-h-[90vh]"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
           />
         </AnimatePresence>
-        
-        {/* Gradient Overlay for better text readability and dramatic effect */}
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-transparent to-zinc-950" />
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col items-center justify-center text-center max-w-5xl h-full mt-24 md:mt-48">
+      <div className="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col items-center justify-start text-center max-w-5xl h-full pt-16 md:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
