@@ -20,19 +20,27 @@ export default function Hero() {
     <div className="relative w-full min-h-screen overflow-hidden flex items-center justify-center bg-zinc-950">
       {/* Background/Central Image Container - Side layout on large screens */}
       <div className="absolute bottom-0 right-0 z-0 flex items-end justify-center pointer-events-none w-full md:w-1/2 h-full">
-        <AnimatePresence mode="wait">
+        {IMAGES.map((src, index) => (
           <motion.img
-            key={currentIndex}
-            src={IMAGES[currentIndex]}
+            key={src}
+            src={src}
             alt="Hero character illustration"
-            className="w-full object-contain max-h-[70vh] md:max-h-[90vh] md:object-bottom"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute bottom-0 w-full object-contain max-h-[70vh] md:max-h-[90vh] md:object-bottom"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: index === currentIndex ? 1 : 0,
+              filter: index === currentIndex 
+                ? ["saturate(1) hue-rotate(0deg)", "saturate(5) hue-rotate(90deg)", "saturate(1) hue-rotate(0deg)"]
+                : "none",
+              x: index === currentIndex ? [0, -5, 5, -2, 0] : 0,
+              y: index === currentIndex ? [0, 5, -5, 2, 0] : 0,
+              scale: index === currentIndex ? [1, 1.05, 1] : 1,
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           />
-        </AnimatePresence>
+        ))}
       </div>
+
 
       {/* Content Overlay */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col items-center md:items-start justify-center text-center md:text-left max-w-7xl h-full pt-16 md:pt-0">
