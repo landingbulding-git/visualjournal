@@ -36,7 +36,7 @@ export default function Hero() {
               y: index === currentIndex ? [0, 5, -5, 2, 0] : 0,
               scale: index === currentIndex ? [1, 1.05, 1] : 1,
             }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.15, ease: "easeInOut" }}
           />
         ))}
       </div>
@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white mb-8 drop-shadow-2xl"
+            className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white mb-8 drop-shadow-2xl max-w-4xl"
           >
             <span className="text-primary block">"Azt kérte,</span> tegyek úgy, mintha aludnék"
           </motion.h1>
