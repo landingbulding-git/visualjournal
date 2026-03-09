@@ -21,20 +21,20 @@ export default function OverlayScrolly() {
   return (
     <div ref={containerRef} id="story-start" className="relative min-h-[300vh] bg-zinc-950 overflow-hidden">
       {/* Sticky Character Container */}
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center">
-        {/* Main Character - Stable/Sticky */}
+      <div className="sticky top-0 h-screen w-full overflow-hidden">
+        {/* Main Character - Stable at bottom */}
         <img
           src="https://pjvq1reclhljbaqu.public.blob.vercel-storage.com/main-zsofi.webp"
           alt="Character Zsofi"
-          className="absolute w-full h-full object-contain max-h-[90vh]"
+          className="absolute bottom-0 left-0 right-0 w-full object-contain max-h-[70vh]"
         />
         
-        {/* Pumpkin Character - Horizontal Parallax */}
+        {/* Pumpkin Character - Top Band Parallax */}
         <motion.img
           style={{ opacity: pumpkinOpacity, x: pumpkinX }}
           src="https://pjvq1reclhljbaqu.public.blob.vercel-storage.com/pumpkin-Photoroom.webp"
           alt="Character Pumpkin"
-          className="absolute w-full h-full object-contain max-h-[50vh] z-10 top-10"
+          className="absolute top-10 w-full object-contain max-h-[40vh] z-10"
         />
       </div>
 
