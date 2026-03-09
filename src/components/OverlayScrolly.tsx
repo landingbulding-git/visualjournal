@@ -26,7 +26,7 @@ export default function OverlayScrolly() {
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         {/* Main Character - Zsofi */}
         <motion.img
-          style={{ scale: zsofiScale, x: '-50%' }}
+          style={{ scale: zsofiScale, x: '-50%', transformOrigin: 'bottom' }}
           src="https://pjvq1reclhljbaqu.public.blob.vercel-storage.com/main-zsofi.webp"
           alt="Character Zsofi"
           className="absolute bottom-0 left-1/2 w-full object-contain max-h-[70vh]"
