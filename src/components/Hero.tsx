@@ -43,8 +43,8 @@ export default function Hero() {
 
 
       {/* Content Overlay */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col items-center md:items-start justify-center text-center md:text-left max-w-7xl h-full pt-16 md:pt-0">
-        <div className="md:w-1/2 flex flex-col items-center md:items-start">
+      <div className="relative z-10 container mx-auto px-6 lg:px-12 h-full pt-16 md:pt-0 grid grid-cols-1 md:grid-cols-12 items-center">
+        <div className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,9 +58,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white mb-8 drop-shadow-2xl max-w-4xl"
+            className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white mb-8 drop-shadow-2xl max-w-3xl"
           >
-            <span className="bg-primary px-2 py-1 rounded inline-block leading-tight">"Azt kérte, tegyek úgy, mintha aludnék"</span>
+            <span className="bg-primary px-4 py-1 rounded-sm decoration-clone">"Azt kérte, tegyek úgy, mintha aludnék"</span>
           </motion.h1>
 
           <motion.p
@@ -83,7 +83,11 @@ export default function Hero() {
             Ez érdekes.. Elolvasom!
           </motion.button>
         </div>
+        
+        {/* Empty col for space on mobile, or could be used for image if needed in grid */}
+        <div className="hidden md:block md:col-span-5" />
       </div>
+
     </div>
   );
 }
