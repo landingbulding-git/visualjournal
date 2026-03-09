@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Hero from '../components/Hero';
+import OverlayScrolly from '../components/OverlayScrolly';
 ---
 
 <!doctype html>
@@ -26,6 +27,7 @@ import Hero from '../components/Hero';
 	<body class="bg-zinc-950 text-zinc-50 m-0 p-0 antialiased overflow-x-hidden">
 		<main>
 			<Hero client:load />
+			<OverlayScrolly client:visible />
 		</main>
 	</body>
 </html>

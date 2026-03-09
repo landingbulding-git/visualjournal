@@ -78,6 +78,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById('story-start')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-[0_0_30px_rgba(226,74,112,0.4)] hover:bg-[#c2385b] hover:shadow-[0_0_40px_rgba(226,74,112,0.6)] transition-all duration-300 tracking-wide text-lg md:text-xl"
           >
             Ez érdekes.. Elolvasom!
