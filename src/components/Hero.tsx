@@ -60,7 +60,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.4 }}
             className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white mb-8 drop-shadow-2xl max-w-4xl"
           >
-            <span className="bg-primary px-2 py-1 rounded inline-block">"Azt kérte,</span> tegyek úgy, mintha aludnék"
+            <span className="bg-primary px-2 py-1 rounded inline-block leading-tight">"Azt kérte, tegyek úgy, mintha aludnék"</span>
           </motion.h1>
 
           <motion.p
